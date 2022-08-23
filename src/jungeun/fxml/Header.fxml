@@ -2,17 +2,21 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
       <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
             <Insets bottom="22.0" left="264.0" right="264.0" top="22.0" />
          </VBox.margin>
+         <image>
+            <Image url="@../../img/logo.png" />
+         </image>
       </ImageView>
       <HBox prefHeight="40.0" prefWidth="600.0">
          <children>

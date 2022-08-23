@@ -12,7 +12,8 @@ public class jun01 extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		CommonService comServ = new CommonServiceImpl();
-		comServ.showWindow(primaryStage, "../aaa.fxml");
+				
+		comServ.showWindow(primaryStage, "../fxml/Test1Form.fxml");
 	}
 	
 	public static void main(String[] args) {

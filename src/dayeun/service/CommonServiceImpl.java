@@ -3,21 +3,12 @@ package dayeun.service;
 import java.io.IOException;
 
 import dayeun.controller.Controller;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class CommonServiceImpl implements CommonService{
-
-	@Override
-	public void WindowClose(ActionEvent event) {
-		// TODO Auto-generated method stub
-		Parent root = (Parent) event.getSource();
-		Stage stage = (Stage) root.getScene().getWindow();
-		stage.close();
-	}
+public class CommonServiceImpl implements CommonService {
 
 	@Override
 	public Parent showWindow(Stage s, String formPath) {
@@ -26,7 +17,7 @@ public class CommonServiceImpl implements CommonService{
 				(getClass().getResource(formPath));
 		
 		Parent root = null;
-		
+		//경로
 		try {
 			root = loader.load();
 			s.setScene(new Scene(root));
@@ -37,7 +28,7 @@ public class CommonServiceImpl implements CommonService{
 		
 		Controller ctl = loader.getController();
 		ctl.setRoot(root);
-	
+		
 		s.show();
 		
 		return root;

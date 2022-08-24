@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jungeun.controller.TestController">
    <children>
       <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
@@ -34,7 +34,7 @@
             </Button>
          </children>
       </HBox>
-      <Label text="다이어트 의지 테스트">
+      <Label text="모임성향 테스트">
          <font>
             <Font size="24.0" />
          </font>
@@ -42,15 +42,15 @@
             <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
          </VBox.margin>
       </Label>
-      <ImageView fx:id="test1Img" fitHeight="185.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="test2Img" fitHeight="185.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
             <Insets left="165.0" />
          </VBox.margin>
          <image>
-            <Image url="@../../img/test1_quiz.jpg" />
+            <Image url="@../../img/test3_quiz.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="600.0" text="Q5. 직접 도시락을 만들고 챙기면서 식단 조절을 생활화한다.">
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="600.0" text="Q4. 나는 주말에 갑자기 나오라는 연락에 즐거운 마음으로 바로 나간다.">
          <font>
             <Font size="14.0" />
          </font>

@@ -34,14 +34,14 @@
             </Button>
          </children>
       </HBox>
-      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="운동할 기회를 놓치지 않는">
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="파티가 두렵지 않은">
          <font>
             <Font size="18.0" />
          </font>
          <VBox.margin>
             <Insets top="30.0" />
          </VBox.margin></Label>
-      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="타고난 다이어트 천재" textAlignment="CENTER">
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="위풍당당 DNA" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
@@ -73,23 +73,23 @@
             <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
          </VBox.margin>
          <image>
-            <Image url="@../../img/test1_res1.png" />
+            <Image url="@../../img/test3_res1.png" />
          </image></ImageView>
-      <Label prefHeight="20.0" prefWidth="500.0" text="다이어트 의지가 상당하군요. 성공 의지가 대단한 사람입니다.">
+      <Label prefHeight="20.0" prefWidth="500.0" text="어디에서든 자신감 넘치는 사람!">
          <font>
             <Font size="14.0" />
          </font>
          <VBox.margin>
             <Insets left="30.0" />
          </VBox.margin></Label>
-      <Label prefHeight="20.0" prefWidth="500.0" text="다이어트 성공 가능성이 아주 높습니다!">
+      <Label prefHeight="20.0" prefWidth="500.0" text="낯선 환경에서도 적응하는 능력이 탁월한 편">
          <VBox.margin>
             <Insets left="30.0" />
          </VBox.margin>
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label prefHeight="20.0" prefWidth="500.0" text="멋진 몸매를 가질때까지 화이팅하세요!">
+      <Label prefHeight="20.0" prefWidth="500.0" text="의견을 꾸밈없이 얘기하는 슈퍼 솔직러">
          <VBox.margin>
             <Insets left="30.0" />
          </VBox.margin>

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -15,6 +16,9 @@
          <VBox.margin>
             <Insets bottom="22.0" left="264.0" right="264.0" top="22.0" />
          </VBox.margin>
+         <image>
+            <Image url="@../../img/logo.png" />
+         </image>
       </ImageView>
       <HBox prefHeight="40.0" prefWidth="600.0">
          <children>
@@ -42,6 +46,9 @@
          <VBox.margin>
             <Insets left="165.0" />
          </VBox.margin>
+         <image>
+            <Image url="@../../img/test1_quiz.jpg" />
+         </image>
       </ImageView>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="600.0" text="Q3. 고칼로리 음식이 유혹해도 잘 참아낸다.">
          <font>

@@ -64,6 +64,9 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="quiz" />
+               </toggleGroup>
             </RadioButton>
             <RadioButton fx:id="noBtn" mnemonicParsing="false" text="아니다">
                <font>

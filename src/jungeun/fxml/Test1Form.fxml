@@ -94,7 +94,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="testBtn" mnemonicParsing="false" prefHeight="40.0" prefWidth="525.0" style="-fx-background-color: rgb(52,152,219);" text="테스트 시작" textFill="WHITE">
+      <Button fx:id="testBtn" onAction="#StartTest" mnemonicParsing="false" prefHeight="40.0" prefWidth="525.0" style="-fx-background-color: rgb(52,152,219);" text="테스트 시작" textFill="WHITE">
          <VBox.margin>
             <Insets left="40.0" top="40.0" />
          </VBox.margin>

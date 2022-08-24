@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jungeun.controller.TestController">
    <children>
       <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
@@ -64,6 +64,9 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="quiz" />
+               </toggleGroup>
             </RadioButton>
             <RadioButton fx:id="noBtn" mnemonicParsing="false" text="아니다">
                <font>
@@ -78,7 +81,7 @@
             <Insets left="150.0" right="150.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <Button fx:id="nextBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52,152,219);" text="다음 페이지" textFill="WHITE">
+      <Button fx:id="nextBtn" onAction="#NextTest" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52,152,219);" text="다음 페이지" textFill="WHITE">
          <VBox.margin>
             <Insets left="400.0" top="45.0" />
          </VBox.margin>

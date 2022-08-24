@@ -5,18 +5,20 @@ import java.util.ResourceBundle;
 
 import dayeun.service.CommonService;
 import dayeun.service.CommonServiceImpl;
-import dayeun.service.MyPageService;
+import dayeun.service.MemberDropService;
+import dayeun.service.MemberDropServiceImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class MyPageController extends Controller implements Initializable {
+public class MemberDropController extends Controller implements Initializable {
 	private Parent root;
+	
 	private CommonService cs;
 	//private MyPageService mps;
+	private MemberDropService mds;
 	
 	/////////////////////////////////Controller 메소드/////////////////////////////////////////
 	@Override
@@ -29,8 +31,7 @@ public class MyPageController extends Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		cs=new CommonServiceImpl();
-
-	
+		mds=new MemberDropServiceImpl();
 	}//initialize
 
 	@Override
@@ -48,17 +49,17 @@ public class MyPageController extends Controller implements Initializable {
 		//현재 로그인인지 아닌지 구분
 		//로그인 상태 : 마이페이지로 이동
 		//비로그인 상태 : 로그인 페이지로 이동
+		Server server=new Server();
+		server.loginFlag=true;
+		server.id="123";
 		
-		if(Server.loginFlag) { //로그인 flag가 true면 마이페이지로 이동, 아니면 로그인 페이지로 이동
+		if(server.loginFlag) { //로그인 flag가 true면 마이페이지로 이동, 아니면 로그인 페이지로 이동
 			CommonService cs=new CommonServiceImpl();
 			Stage s=new Stage();
 			cs.showWindow(s, "../fxml/MyPageForm.fxml");
 			
 			cs.windowClose(event);
 		}else {
-			//비회원일 때 마이페이지 페이지에 접속 시도
-			Server.navigation="mypage"; //로그인 성공 후에 마이페이지 사이트로 이동
-			
 			CommonService cs=new CommonServiceImpl();
 			Stage s=new Stage();
 			cs.showWindow(s, "../fxml/LoginForm.fxml");
@@ -68,43 +69,25 @@ public class MyPageController extends Controller implements Initializable {
 		
 	}//OpenMyPage
 	
-	//////////////////////////////////마이페이지 메소드/////////////////////////////////////
-	public void test1ResForm(ActionEvent event) {
-		
-	};
-	
-	public void test2ResForm(ActionEvent event) {
-		
-	};
-	
-	public void test3ResForm(ActionEvent event) {
-		
-	};
-	
-	public void LogOut(ActionEvent event) { 
-		//로그아웃 메소드
-		//서버 로그아웃
-		Server.loginFlag=false; //비회원 상태로 전환
-		Server.id=""; //아이디 빈칸으로 전환
-		
-		//메인 페이지로 이동
-		Stage s=new Stage();
-		cs.showWindow(s, "../fxml/MainForm.fxml");
-		
-		//마이페이지 페이지 닫음
-		cs.windowClose(event);
-	};//LogOut
-	
-	public void DropChkForm(ActionEvent event) {
-		//탈퇴 페이지 이동 메소드
-		Stage s=new Stage();
+	/////////////////////////////////////////////MemberDropController(회원탈퇴) 메소드//////////////////////////////////////////////////
+	public void next(ActionEvent event) {  //MemeberDropWarnForm에서 다음 버튼을 클릭할 시,
+		//탈퇴 설문조사 comboBOX 생성
 		Parent form=null;
+		Stage s=new Stage();
+		form=cs.showWindow(s, "../fxml/MemberDropSurveyForm.fxml"); //회원탈퇴 이유 설문조사 페이지로 이동
+		String[] items = {"자주 사용하지 않습니다.", "사용할 때 오류가 있습니다.", "개인정보 노출이 우려됩니다.", "기타"};
 		
-		form=cs.showWindow(s, "../fxml/MemberDropWarnForm.fxml");
+		@SuppressWarnings("unchecked")
+		ComboBox<String> surveyCb = (ComboBox<String>) form.lookup("#surveyCb");
 		
-		cs.windowClose(event); //마이페이지 창 닫기 
-		
-	};//DropChkForm
+		for(String item : items) {
+			surveyCb.getItems().add(item);
+		}//end for
+		cs.windowClose(event); // 회원탈퇴 경고 페이지 닫기
+	}//nextBtn
+	
 
-
+	
+	
+	
 }//class

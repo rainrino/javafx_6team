@@ -45,9 +45,6 @@ public class MainController extends Controller implements Initializable {
 		//현재 로그인인지 아닌지 구분
 		//로그인 상태 : 마이페이지로 이동
 		//비로그인 상태 : 로그인 페이지로 이동
-
-		Server.loginFlag=true;
-		Server.id="456";
 		Member m=new Member();
 		
 		if(Server.loginFlag) { //로그인 flag가 true면 마이페이지로 이동, 아니면 로그인 페이지로 이동
@@ -101,6 +98,8 @@ public class MainController extends Controller implements Initializable {
 
 			
 		}else {
+			//비회원인 상태에서 마이페이지 버튼을 눌렀을 경우
+			Server.navigation="mypage";
 			CommonService cs=new CommonServiceImpl();
 			Stage s=new Stage();
 			cs.showWindow(s, "../fxml/LoginForm.fxml");

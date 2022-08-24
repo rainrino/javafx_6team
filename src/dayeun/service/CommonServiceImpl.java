@@ -3,6 +3,7 @@ package dayeun.service;
 import java.io.IOException;
 
 import dayeun.controller.Controller;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -32,6 +33,26 @@ public class CommonServiceImpl implements CommonService {
 		s.show();
 		
 		return root;
+	}
+
+	@Override
+	public void windowClose(ActionEvent event) {
+		// TODO Auto-generated method stub
+		Parent root = (Parent) event.getSource();
+		Stage stage = (Stage) root.getScene().getWindow();
+		stage.close();
+	}//windowClose
+
+	@Override
+	public boolean chkLogin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void errorBox(String title, String header, String content) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

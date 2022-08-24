@@ -10,7 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@../../css/mainstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayeun.controller.LoginController">
+<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@../../css/mainstyle.css" xmlns="http://javafx.com/javafx/8.0.171" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayeun.controller.MainController">
    <children>
       <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
@@ -22,12 +23,12 @@
       </ImageView>
       <HBox prefHeight="40.0" prefWidth="600.0">
          <children>
-            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(52,152,219);" text="홈" textFill="WHITE">
+            <Button fx:id="homeBtn" onAction="#OpenHome" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(52,152,219);" text="홈" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="mypageBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(224, 224, 224);" text="마이 페이지" textFill="WHITE">
+            <Button fx:id="mypageBtn" onAction="#OpenMyPage" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(224, 224, 224);" text="마이 페이지" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -36,7 +37,7 @@
       </HBox>
       <AnchorPane prefHeight="462.0" prefWidth="600.0">
          <children>
-            <Label fx:id="allTestLbl" prefHeight="55.0" prefWidth="372.0" stylesheets="@../../../../javaFX_workspace/javafx_6team/src/css/style.css" text="최근에 올라온 심리테스트">
+            <Label fx:id="allTestLbl" prefHeight="55.0" prefWidth="372.0" text="최근에 올라온 심리테스트">
                <font>
                   <Font size="36.0" />
                </font>

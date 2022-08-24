@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="360.0" prefWidth="600.0" stylesheets="@../../css/mainstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="dayeun.controller.MemberShipController">
+   <children>
+      <HBox prefHeight="40.0" prefWidth="600.0" />
+      <AnchorPane prefHeight="461.0" prefWidth="600.0">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <children>
+            <Button fx:id="idChkDupBtn" onAction="#LoginDupChk" layoutX="365.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: rgb(52, 152, 219);" text="중복확인" textFill="WHITE" />
+            <Button fx:id="exitBtn" onAction="#Exit" layoutX="450.0" layoutY="289.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgb(94, 94, 94);" text="닫기" textFill="WHITE" />
+            <TextField fx:id="idChkDupTf" layoutX="168.0" layoutY="160.0" prefHeight="40.0" prefWidth="188.0" />
+            <Label layoutX="68.0" layoutY="170.0" prefHeight="0.0" prefWidth="100.0" text="아이디" />
+            <Label fx:id="chkDupIdLbl" layoutX="54.0" layoutY="51.0" text="아이디 중복 확인" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

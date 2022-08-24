@@ -7,7 +7,7 @@ public class Member {
 	private int test1Res;
 	private int test2Res;
 	private int test3Res;
-	private boolean dropFlag;
+	private String dropFlag;
 	
 	public String getId() {
 		return id;
@@ -45,12 +45,14 @@ public class Member {
 	public void setTest3Res(int test3Res) {
 		this.test3Res = test3Res;
 	}
-	public boolean isDropFlag() {
+	
+	public String getDropFlag() {
 		return dropFlag;
 	}
-	public void setDropFlag(boolean dropFlag) {
+	public void setDropFlag(String dropFlag) {
 		this.dropFlag = dropFlag;
 	}
+
 	
 	
 	

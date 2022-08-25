@@ -68,7 +68,7 @@
                   <ToggleGroup fx:id="quiz" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="noBtn" mnemonicParsing="false" text="아니다">
+            <RadioButton fx:id="noBtn" mnemonicParsing="false" text="아니다" toggleGroup="$quiz">
                <font>
                   <Font size="14.0" />
                </font>

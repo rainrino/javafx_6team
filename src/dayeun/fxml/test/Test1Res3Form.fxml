@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="dayeun.controller.TestController">
+   <children>
+      <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets bottom="22.0" left="264.0" right="264.0" top="22.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../img/logo.png" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="40.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(52,152,219);" text="홈" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mypageBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(224, 224, 224);" text="마이 페이지" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="변화가 필요한">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="새싹 다이어터" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Label>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <TextField fx:id="percent1Tf" disable="true" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;">
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="300.0" text="\%가 이 유형을 선택하였습니다." textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../img/test1_res3.png" />
+         </image></ImageView>
+      <Label prefHeight="20.0" prefWidth="500.0" text="안타깝지만 다이어트 의지가 약합니다.">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin></Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="이대로 가다가는 멋진 몸매와는 영원히 만날수가 없을지도 몰라요.">
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="다시 한번 의지를 불태우세요.">
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="allResBtn" onAction="#AllRes" mnemonicParsing="false" prefHeight="40.0" prefWidth="420.0" style="-fx-background-color: rgb(52,152,219);" text="다른 유형보기" textFill="WHITE">
+         <VBox.margin>
+            <Insets left="90.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="commentBtn"  onAction="#CommentForm"  mnemonicParsing="false" prefHeight="40.0" prefWidth="420.0" style="-fx-background-color: rgb(224, 224, 224);" text="댓글 쓰러가기" textFill="WHITE">
+         <VBox.margin>
+            <Insets left="90.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</VBox>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="1160.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+   <children>
+      <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets bottom="22.0" left="264.0" right="264.0" top="22.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../img/logo.png" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="40.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(52,152,219);" text="홈" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mypageBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: rgb(224, 224, 224);" text="마이 페이지" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="파티가 두렵지 않은">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="위풍당당 DNA" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Label>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <TextField fx:id="percent1Tf" disable="true" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;">
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="300.0" text="\%가 이 유형을 선택하였습니다." textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../img/test3_res1.png" />
+         </image></ImageView>
+      <Label prefHeight="20.0" prefWidth="500.0" text="어디에서든 자신감 넘치는 사람!">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin></Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="낯선 환경에서도 적응하는 능력이 탁월한 편">
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="의견을 꾸밈없이 얘기하는 슈퍼 솔직러">
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="따뜻한 마음의">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="리액션왕 DNA" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <TextField fx:id="percent2Tf" disable="true" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;">
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="300.0" text="\%가 이 유형을 선택하였습니다." textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/test3_res2.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label prefHeight="20.0" prefWidth="500.0" text="내가 잘못한 건 없는지 여러 번 체크 또 체크">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="말하는 사람을 기분 좋게 만드는 뛰어난 공감 능력의 소유자">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="정이 많고 베풀기도 잘해 모두에게 휴식처 같은 존재">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="600.0" text="복잡한 세상 편하게 살자">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="600.0" text="복세편살 DNA" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <TextField fx:id="percent3Tf" disable="true" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;">
+               <HBox.margin>
+                  <Insets left="190.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="300.0" text="\%가 이 유형을 선택하였습니다." textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/test3_res3.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label prefHeight="20.0" prefWidth="500.0" text="미루기 장인이지만, 때가 되면 누구보다 열심히!">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="탁월한 공감 능력의 소유자">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="20.0" prefWidth="500.0" text="약속이 갑자기 취소되면 내적 기쁨이 2배">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="returnResBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="420.0" style="-fx-background-color: rgb(52,152,219);" text="결과로 돌아가기" textAlignment="CENTER" textFill="WHITE">
+         <VBox.margin>
+            <Insets left="90.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

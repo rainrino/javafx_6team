@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@../../css/mainstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayeun.controller.MainController">
+<VBox prefHeight="600.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dayeun.controller.TestController">
    <children>
       <ImageView fx:id="logoImg" fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
             <Insets bottom="22.0" left="264.0" right="264.0" top="22.0" />
          </VBox.margin>
          <image>
-            <Image url="@../../img/logo.png" />
+            <Image url="@../../../img/logo.png" />
          </image>
       </ImageView>
       <HBox prefHeight="40.0" prefWidth="600.0">
@@ -39,9 +39,14 @@
             <Insets left="30.0" />
          </padding>
          <children>
-            <Label layoutX="170.0" layoutY="151.0" prefHeight="20.0" prefWidth="286.0" text="로그인하시면 결과가 입력됩니다!" textAlignment="CENTER" />
-            <Button layoutX="80.0" layoutY="359.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52, 152, 219);" text="로그인하기" textFill="WHITE" />
-            <Button layoutX="332.0" layoutY="359.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(190, 190, 190);" text="비회원으로 보기" textFill="WHITE" />
+            <Label layoutX="137.0" layoutY="55.0" prefHeight="20.0" prefWidth="331.0" text="로그인하시고 더 많은 기능을 사용해 보세요!" textAlignment="CENTER" />
+            <Button fx:id="loginBtn" onAction="#loginForm" layoutX="80.0" layoutY="359.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52, 152, 219);" text="로그인하기" textFill="WHITE" />
+            <Button fx:id="resultBtn" onAction="#resultForm" layoutX="332.0" layoutY="359.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(190, 190, 190);" text="비회원으로 보기" textFill="WHITE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/testRes.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

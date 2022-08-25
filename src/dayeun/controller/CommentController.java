@@ -1,8 +1,12 @@
 package dayeun.controller;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import dayeun.service.CommentService;
+import dayeun.service.CommentServiceImpl;
 import dayeun.service.CommonService;
 import dayeun.service.CommonServiceImpl;
 import dayeun.service.MyPageService;
@@ -10,15 +14,16 @@ import dayeun.service.MyPageServiceImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class MainController extends Controller implements Initializable {
+public class CommentController extends Controller implements Initializable {
 	private Parent root;
 	private CommonService cs;
 	private MyPageService mps;
-
+	private CommentService cms;
+	
 	public void setRoot(Parent root) {
 		// TODO Auto-generated constructor stub
 		this.root = root;
@@ -29,6 +34,7 @@ public class MainController extends Controller implements Initializable {
 		// TODO Auto-generated method stub
 		cs=new CommonServiceImpl();
 		mps=new MyPageServiceImpl();
+		cms=new CommentServiceImpl();
 	}//initialize
 
 	@Override
@@ -106,31 +112,75 @@ public class MainController extends Controller implements Initializable {
 			cs.windowClose(event);
 		}//end else
 	}//OpenMyPage
-	
-	
-	public void OpenTest1Page(ActionEvent event) { //다이어트 의지 테스트로 이동
-		CommonService cs=new CommonServiceImpl();
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public void InsertComment(ActionEvent event) {
 		Stage s=new Stage();
-		cs.showWindow(s, "../fxml/test/Test1Form.fxml");
-		cs.windowClose(event);
+		setRoot(root);
+		Comment c=new Comment();
 		
-		TestResult.testNum=1;  // 테스트 하는 종류 표시 1. 다이어트 테스트
-	}//OpenTest1Page
+		int res=0; //댓글이 잘 입력되었는지 확인
+		
+		TextField inputTf=(TextField) root.lookup("#inputTf");
+		c.setContent(inputTf.getText()); //댓글 comment에 저장
+		if(Server.loginFlag) { //로그인 상태일 때		
+			
+			switch(TestResult.testNum) {
+			case 1:
+				switch(TestResult.result){
+				case 1:
+					c.setRes("#타고난 다이어트 천재");
+					break;
+				case 2:
+					c.setRes("#희망이 보이는 다이어터");
+					break;
+				case 3:
+					c.setRes("#새싹 다이어터");
+					break;
+				}//end switch
+				c.setId(Server.id);
+				res=cms.insertCommentTest1(c);
+				//상태 메세지 출력
+				if(res==1) { //댓글 입력 완료 시
+					cs.errorBox("댓글 입력 완료", "댓글 입력 완료", "댓글이 입력되었습니다");
+				}else {
+					cs.errorBox("댓글 입력 실패", "댓글 입력 실패", "오류가 발생했습니다. 관리자에게 문의해주세요");
+				}//end else
+				
+				//댓글 가져와서 뿌리기 (최근2건만)
+				root=cs.showWindow(s, "../fxml/CommentTest.fxml");
+				List<Comment> commentList=new ArrayList<>();
+				commentList=cms.selectCommentList();
+				
+				Label idLbl1=(Label) root.lookup("#idLbl1");
+				Label resLbl1=(Label) root.lookup("#resLbl1");
+				Label contentLbl1=(Label) root.lookup("#contentLbl1");
+				
+				Label idLbl2=(Label) root.lookup("#idLbl2");
+				Label resLbl2=(Label) root.lookup("#resLbl2");
+				Label contentLbl2=(Label) root.lookup("#contentLbl2");
+				
+				idLbl1.setText(commentList.get(0).getId());
+				resLbl1.setText(commentList.get(0).getRes());
+				contentLbl1.setText(commentList.get(0).getContent());
+
+//				idLbl2.setText(commentList.get(1).getId());
+//				resLbl2.setText(commentList.get(1).getRes());
+//				contentLbl2.setText(commentList.get(1).getContent());
+				cs.windowClose(event);
+				break;
+			case 2:
+				break;
+			case 3: 
+				break;
+			}//end switch
+		
+		}else { //비회원 상태일 때
+			cs.showWindow(s, "../fxml/LoginForm.fxml");
+		}//end else
+		
+	}//InsertComment
 	
-	public void OpenTest2Page(ActionEvent event) { //소비 성향 테스트로 이동
-		CommonService cs=new CommonServiceImpl();
-		Stage s=new Stage();
-		cs.showWindow(s, "../fxml/test/Test2Form.fxml");
-		cs.windowClose(event);
-		TestResult.testNum=2;  // 테스트 하는 종류 표시 2. 소비성향 테스트
-	}//OpenTest1Page
 	
-	public void OpenTest3Page(ActionEvent event) { //모임 성향 테스트로 이동
-		CommonService cs=new CommonServiceImpl();
-		Stage s=new Stage();
-		cs.showWindow(s, "../fxml/test/Test3Form.fxml");
-		cs.windowClose(event);
-		TestResult.testNum=3;  // 테스트 하는 종류 표시 3. 모임성향 테스트
-	}//OpenTest1Page
 	
-}//class
+	
+}

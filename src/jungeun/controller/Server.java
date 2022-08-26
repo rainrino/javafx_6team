@@ -1,4 +1,4 @@
-package jungeun.mainAndClass;
+package jungeun.controller;
 
 public class Server {
 	// true : 로그인 중 , false : 비회원

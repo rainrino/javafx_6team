@@ -38,7 +38,7 @@ public class CommonServiceImpl implements CommonService {
 	}
 
 	@Override
-	public void WindowClose(ActionEvent event) {
+	public void windowClose(ActionEvent event) {
 		// TODO Auto-generated method stub
 		Parent root = (Parent) event.getSource();
 		Stage stage = (Stage) root.getScene().getWindow();

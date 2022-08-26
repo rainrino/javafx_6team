@@ -1,7 +1,7 @@
 package jungeun.service;
 
 import jungeun.DAO.MemberDAO;
-import jungeun.mainAndClass.Member;
+import jungeun.controller.Member;
 
 public class LoginServiceImpl implements LoginService{
 	private Member m;

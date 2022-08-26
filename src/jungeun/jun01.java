@@ -1,4 +1,4 @@
-package jungeun.mainAndClass;
+package jungeun;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -11,9 +11,9 @@ public class jun01 extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		CommonService comServ = new CommonServiceImpl();
+		CommonService commonServ = new CommonServiceImpl();
 				
-		comServ.showWindow(primaryStage, "../fxml/Test1Form.fxml");
+		commonServ.showWindow(primaryStage, "../fxml/MainForm.fxml");
 	}
 	
 	public static void main(String[] args) {

@@ -58,7 +58,7 @@
       </Label>
       <HBox prefHeight="20.0" prefWidth="600.0" spacing="150.0">
          <children>
-            <RadioButton fx:id="yesBtn" mnemonicParsing="false" text="그렇다">
+            <RadioButton fx:id="yesBtn" mnemonicParsing="false" selected="true" text="그렇다">
                <font>
                   <Font size="14.0" />
                </font>
@@ -82,7 +82,7 @@
             <Insets left="150.0" right="150.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <Button fx:id="nextBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#NextTest" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52,152,219);" text="다음 페이지" textFill="WHITE">
+      <Button fx:id="nextBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Quiz3" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: rgb(52,152,219);" text="다음 페이지" textFill="WHITE">
          <VBox.margin>
             <Insets left="400.0" top="45.0" />
          </VBox.margin>

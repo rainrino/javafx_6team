@@ -6,7 +6,7 @@ import jungeun.service.CommonService;
 
 public class MemberDAOImpl implements MemberDAO{
 	Connection con;
-	private CommonService comServ;
+	private CommonService commonServ;
 	
 	public MemberDAOImpl() {
 		// TODO Auto-generated constructor stub

@@ -1,4 +1,4 @@
-package jungeun.mainAndClass;
+package jungeun.controller;
 
 public class Member {
 	private String id;

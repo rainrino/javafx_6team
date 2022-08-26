@@ -1,4 +1,4 @@
-package jungeun.mainAndClass;
+package jungeun.controller;
 
 public class Comment {
 	private String id;

@@ -1,54 +1,130 @@
 package jungeun.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.control.RadioButton;
-import javafx.stage.Stage;
-import jungeun.mainAndClass.Member;
-import jungeun.mainAndClass.TestResult;
+import jungeun.DAO.TestDAO;
+import jungeun.DAO.TestDAOImpl;
+import jungeun.controller.Member;
+import jungeun.controller.TestPercent;
 
 public class TestServiceImpl implements TestService{
-	private CommonService commonServ;
-	private int quizNum;
-	private Member m;
-	private String quizAnswer;
-	List<TestResult> tsList = new ArrayList<TestResult>();
-
-	@FXML RadioButton yesBtn;
+	TestDAO testDAO = new TestDAOImpl();
 
 	@Override
-//	public List<TestResult> nextTest(Parent root, ActionEvent event) {
-	public String nextTest(Parent root, ActionEvent event) {
-		// TODO Auto-generated method stub
-		commonServ = new CommonServiceImpl();
-		quizNum = 1;
-//		TestResult ts = new TestResult();
-		String aaa = "";
-		RadioButton yesBtn = (RadioButton) root.lookup("#yesBtn");
-		if(yesBtn.isSelected()) {
-//			ts.setRes("yes");
-			aaa = quizNum + " : yes";
-		} else {
-//			ts.setRes("no");
-			aaa = quizNum + " : no";
-		}
-//		tsList.add(ts);
-		commonServ.WindowClose(event);
-		quizNum++;
-		Stage testQuiz = new Stage();
-//		Stage testQuiz = (Stage) root.getScene().getWindow();
-		commonServ.showWindow(testQuiz, "../fxml/Test1Quiz2Form.fxml");
-//		return tsList;
-		return aaa;
+	public int modifyTest1Res(Member m) {
+		int resMember = 0;
+
+		resMember = testDAO.modifyTest1Res(m);
+
+		return resMember;
 	}
 
 	@Override
-	public void resultTest(Parent root) {
-		// TODO Auto-generated method stub
+	public int modifyTest2Res(Member m) {
+		int resMember = 0;
 
+		resMember = testDAO.modifyTest1Res(m);
+
+		return resMember;
 	}
+
+	@Override
+	public int modifyTest3Res(Member m) {
+		int resMember = 0;
+
+		resMember = testDAO.modifyTest1Res(m);
+
+		return resMember;
+	}
+
+	@Override
+	public int modifyTest1Res1Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest1Res1Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest1Res2Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest1Res2Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest1Res3Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest1Res3Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest2Res1Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest2Res1Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest2Res2Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest2Res2Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest2Res3Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest2Res3Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest3Res1Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest3Res1Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest3Res2Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest3Res2Percent();
+		return resPercent;
+	}
+
+	@Override
+	public int modifyTest3Res3Percent() {
+		int resPercent = 0;
+		resPercent = testDAO.modifyTest3Res3Percent();
+		return resPercent;
+	}
+
+	@Override
+	public TestPercent selectTest1Res() {
+		// TODO Auto-generated method stub
+		TestPercent tp = new TestPercent();
+		tp = testDAO.selectTest1Res();
+
+		tp.setTestNum(1);
+		tp.setRes1Percent();
+		tp.setRes2Percent();
+		tp.setRes3Percent();
+
+		return tp;
+	}
+
+	@Override
+	public TestPercent selectTest2Res() {
+		// TODO Auto-generated method stub
+		TestPercent tp = new TestPercent();
+		tp = testDAO.selectTest2Res();
+		return tp;
+	}
+
+	@Override
+	public TestPercent selectTest3Res() {
+		TestPercent tp = new TestPercent();
+		tp = testDAO.selectTest3Res();
+		return tp;
+	}
+
 }
